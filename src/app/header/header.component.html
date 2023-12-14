@@ -1,9 +1,47 @@
-<mat-toolbar class="headerColour">
-  <img src="assets/img/logo1.jpg" class="logo">
-  <span>Anukuls-Shop</span>
-  <span class="example-spacer"></span>
-  <button mat-button>Home</button>
-  <button mat-button>Category</button>
-  <button mat-button>Product</button>
-  <button mat-button>Profile</button>
-</mat-toolbar>
+<div class="header">
+
+  <div class="logo">
+    <img src="assets/img/logo1.jpg" alt="Logo" href="">
+  </div>
+  <div class="header-content">
+    <div class="dropdown" data-dropdown>
+      <button class="link" data-dropdown-button>Category</button>
+      <div class="dropdown-menu">
+        <div>
+          <div class="dropdown-links">
+            <a href="category/create" class="link">Create</a>
+            <a href="category/list" class="link">List</a>
+            <a href="category/edit" class="link">Edit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="dropdown" data-dropdown>
+    <button class="link" data-dropdown-button>Product</button>
+    <div class="dropdown-menu">
+      <div>
+        <div class="dropdown-links">
+          <a href="product/create" class="link">Create</a>
+          <a href="product/list" class="link">List</a>
+          <a href="product/edit" class="link">Edit</a>
+          <a href="product/detail" class="link">Detail</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown" data-dropdown>
+    <button class="link" data-dropdown-button>Users</button>
+    <div class="dropdown-menu">
+      <div>
+        <div class="dropdown-links">
+          <a href="user/list" class="link">List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+
