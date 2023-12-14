@@ -1,4 +1,11 @@
 /* header.component.css */
+@font-face {
+  font-family: 'CornDemo';
+  src: url('/assets/font/Corn_demo/CornDemo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -27,7 +34,7 @@
   border: none;
   text-decoration: none;
   color: aqua;
-  font-family: inherit;
+  font-family: CornDemo;
   font-size: inherit;
   cursor: pointer;
   padding: 0;
