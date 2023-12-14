@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import {CategoryCreateComponent} from "./pages/category/category-create/category-create.component";
 
 export const routes: Routes = [
   {
@@ -57,8 +56,8 @@ export const routes: Routes = [
       import('./pages/user/user-list/user-list.component').then(val => val.UserListComponent),
   },
   {
-    path: '/home',
+    path: 'homepage/home',
     loadComponent: () =>
-      import('./pages/home/home.component').then(val => val.HomeComponent),
+      import('./pages/homepage/home/home.component').then(val => val.HomeComponent),
   }
 ];

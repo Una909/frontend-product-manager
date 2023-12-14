@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/font/Corn_demo/CornDemo-Regular.ttf"
+              "src/styles.scss"
             ],
             "scripts": []
           },
