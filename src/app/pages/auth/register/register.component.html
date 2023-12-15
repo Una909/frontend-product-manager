@@ -1,1 +1,47 @@
-<p>register works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="firstName">First Name*</label>
+    <input type="text" formControlName="firstName" id="firstName">
+    <!-- Add error messages for firstName if needed -->
+  </div>
+  <div>
+    <label for="lastName">Last Name*</label>
+    <input type="text" formControlName="lastName" id="lastName">
+    <!-- Add error messages for lastName if needed -->
+  </div>
+  <div>
+    <label for="street">Street*</label>
+    <input type="text" formControlName="street" id="street">
+  </div>
+  <div>
+    <label for="zip">Zip*</label>
+    <input type="text" formControlName="zip" id="zip">
+  </div>
+  <div>
+    <label for="city">City*</label>
+    <input type="text" formControlName="city" id="city">
+  </div>
+  <div>
+    <label for="country">Country*</label>
+    <input type="text" formControlName="country" id="country">
+  </div>
+  <div>
+    <label for="phone">Phone*</label>
+    <input type="text" formControlName="phone" id="phone">
+  </div>
+  <div>
+    <label for="mobilePhone">MobilePhone*</label>
+    <input type="text" formControlName="mobilePhone" id="mobilePhone">
+  </div>
+  <div>
+    <label for="email">Email*</label>
+    <input type="text" formControlName="email" id="email">
+  </div>
+  <div>
+    <label for="password">Password*</label>
+    <input type="text" formControlName="password" id="password">
+  </div>
+  <div>
+    <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+  </div>
+</form>
