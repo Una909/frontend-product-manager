@@ -1,4 +1,32 @@
-mat-toolbar{
+@font-face {
+  font-family: 'CornDemo';
+  src: url('/assets/font/Corn_demo/CornDemo-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #C1AEFC;
+  padding: 10px;
+}
+
+.footerContent {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.footerText {
+  font-family: 'CornDemo';
+  color: #ffffff;
+  font-size: 18px;
 }
