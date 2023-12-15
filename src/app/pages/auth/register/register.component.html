@@ -1,3 +1,4 @@
+<div class="registerForm">
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
   <div>
     <label for="firstName">First Name*</label>
@@ -45,3 +46,5 @@
     <button type="submit" [disabled]="!registrationForm.valid">Register</button>
   </div>
 </form>
+</div>
+
