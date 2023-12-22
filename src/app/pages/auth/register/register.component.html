@@ -1,14 +1,12 @@
 <div class="registerForm">
-<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="registrationForm" (ngSubmit)="submit()">
   <div>
     <label for="firstName">First Name*</label>
     <input type="text" formControlName="firstName" id="firstName">
-    <!-- Add error messages for firstName if needed -->
   </div>
   <div>
     <label for="lastName">Last Name*</label>
     <input type="text" formControlName="lastName" id="lastName">
-    <!-- Add error messages for lastName if needed -->
   </div>
   <div>
     <label for="street">Street*</label>
@@ -43,7 +41,7 @@
     <input type="text" formControlName="password" id="password">
   </div>
   <div>
-    <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+    <button type="submit">Register</button>
   </div>
 </form>
 </div>
