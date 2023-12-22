@@ -14,7 +14,8 @@ import {UserControllerService} from "../../../openapi-client";
 })
 
 export class RegisterComponent {
-
+    // Creating a FormGroup for the registration form
+    // Each form has its Validators
     registrationForm = new FormGroup({
         firstName: new FormControl<string>('', [
             Validators.required,
@@ -65,8 +66,9 @@ export class RegisterComponent {
             Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*$')
         ])
     });
-
+    // Method to handle the submit button
     submit() {
+        // Getting the values of the form from above and turns it into a variable
         let firstName: string = this.registrationForm.value.firstName!;
         let lastName: string = this.registrationForm.value.lastName!;
         let street: string = this.registrationForm.value.street!;
@@ -77,6 +79,8 @@ export class RegisterComponent {
         let mobilePhone: string = this.registrationForm.value.mobilePhone!;
         let email: string = this.registrationForm.value.email!;
         let password: string = this.registrationForm.value.password!;
+
+        // Calling the userService to match the variables
         this.userService.register({
             firstName: firstName,
             lastName: lastName,
@@ -89,6 +93,7 @@ export class RegisterComponent {
             email: email,
             password: password,
         }).subscribe(value => {
+            // Navigating to the login page after successful registration
             this.router.navigateByUrl('auth/login')
         });
     }

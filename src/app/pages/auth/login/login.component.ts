@@ -14,6 +14,7 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 export class LoginComponent {
   loginForm: FormGroup;
 
+  // Creating the form structure using FormBuilder
   constructor(private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
       email: ['', [
@@ -28,6 +29,7 @@ export class LoginComponent {
     });
   }
 
+  // Method to handle the submit button
   submit() {
     if (this.loginForm.valid) {
       console.log(this.loginForm.value);
