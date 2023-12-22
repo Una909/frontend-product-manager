@@ -1,17 +1,27 @@
-import { ApplicationConfig } from '@angular/core';
+import {ApplicationConfig, importProvidersFrom} from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import {HTTP_INTERCEPTORS, provideHttpClient} from "@angular/common/http";
-import {AuthorizationInterceptor} from "./interceptor/authoriazation.interceptor";
+import {provideHttpClient, withInterceptors} from "@angular/common/http";
+import {authorizationInterceptor} from "./interceptor/authorization.interceptor";
+import {ApiModule, Configuration} from "./openapi-client";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),
-    {
-      provide: HTTP_INTERCEPTORS,
-      multi: true,
-      useClass: AuthorizationInterceptor
-    },
-    provideHttpClient()
-  ]
-};
+    providers: [provideRouter(routes),
+      provideAnimations(),
+      provideHttpClient(
+        withInterceptors([
+          authorizationInterceptor,
+        ])
+      ),
+      importProvidersFrom(
+        ApiModule.forRoot(() => {
+          return new Configuration({
+            basePath: 'https://product-manager.cyrotech.ch'
+          })
+        })
+      )
+    ]
+  };
+
