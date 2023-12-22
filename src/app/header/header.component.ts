@@ -14,7 +14,6 @@ import {RouterLink} from "@angular/router";
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
 }
 
 document.addEventListener('click', e => {
@@ -23,17 +22,18 @@ document.addEventListener('click', e => {
   if (!target) {
     return;
   }
-
+  // Checks if the clicked element is a dropdown button
   const isDropdownButton = target.matches("[data-dropdown-button]");
 
   let currentDropdown: HTMLElement | null;
   if (isDropdownButton) {
     currentDropdown = target.closest('[data-dropdown]');
     if (currentDropdown) {
+      // Toggling the "active" class for the current dropdown
       currentDropdown.classList.toggle('active');
     }
   }
-
+  // Closing other active dropdowns except the current one
   document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
     if (dropdown === currentDropdown) {
       return;

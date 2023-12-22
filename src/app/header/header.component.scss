@@ -1,3 +1,4 @@
+/* Font declaration */
 @font-face {
   font-family: 'CornDemo';
   src: url('/assets/font/Corn_demo/CornDemo-Regular.ttf') format('truetype');
@@ -5,6 +6,7 @@
   font-style: normal;
 }
 
+/* Header styles */
 .header {
   display: flex;
   justify-content: flex-end;
@@ -13,12 +15,14 @@
   background-color: #C1AEFC;
 }
 
+/* Header content arrangement */
 .header-content {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+/* Logo styles */
 .logo {
   margin-right: auto;
 }
@@ -28,17 +32,19 @@
   height: 100px;
 }
 
+/* Links styles */
 .link {
   background: none;
   border: none;
   text-decoration: none;
   color: aqua;
-  font-family: CornDemo;
+  font-family: CornDemo, serif;
   font-size: inherit;
   cursor: pointer;
   padding: 0;
 }
 
+/* Dropdown and hover styles */
 .dropdown.active > .link,
 .link:hover {
   color: black;
@@ -48,6 +54,7 @@
   position: relative;
 }
 
+/* Dropdown menu styles */
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.25rem);
@@ -61,12 +68,14 @@
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
+/* Dropdown menu display when active */
 .dropdown.active > .link + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
+/* Dropdown links styles */
 .dropdown-links {
   display: flex;
   flex-direction: column;
