@@ -38,7 +38,7 @@ export const routes: Routes = [
       import('./pages/product/product-list/product-list.component').then(val => val.ProductListComponent)
   },
   {
-    path: 'product/edit/:id',
+    path: 'product/edit',
     loadComponent: () =>
       import('./pages/product/product-edit/product-edit.component').then(val => val.ProductEditComponent),
       canActivate: [isadminGuard] // Can only be accessed by admins
@@ -62,7 +62,7 @@ export const routes: Routes = [
       import('./pages/category/category-list/category-list.component').then(val => val.CategoryListComponent)
   },
   {
-    path: 'category/edit/:id',
+    path: 'category/edit',
     loadComponent: () =>
       import('./pages/category/category-edit/category-edit.component').then(val => val.CategoryEditComponent),
       canActivate: [isadminGuard] // Can only be accessed by admins
