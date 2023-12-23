@@ -1,15 +1,19 @@
 <div class="loginForm">
   <form [formGroup]="loginForm" (ngSubmit)="submit">
+    <!--Section for Email-->
     <div>
       <label for="email">Email*</label>
       <input type="text" formControlName="email" id="email">
     </div>
+    <!--Section for password-->
     <div>
       <label for="password">Password*</label>
       <input type="password" formControlName="password" id="password">
     </div>
+    <!--CTA buttons-->
     <div>
-      <button type="submit">Login</button>
+      <button class="cta-login" type="submit">Login</button>
+      <button class="cta-register" (click)="navigateToRegister()">Register</button>
     </div>
   </form>
 </div>
