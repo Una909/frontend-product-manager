@@ -1,3 +1,4 @@
+/* Introduction section styling */
 .introduction {
   display: flex;
   flex-direction: column;
@@ -6,21 +7,23 @@
   position: relative;
 }
 
+/* GlassBox styling */
 .glassBox {
   position: absolute;
   margin-top: 100px;
   width: 550px;
   border-radius: 15px;
-  background: rgba(201, 201, 201, 0.15);
-  backdrop-filter: blur(8px);
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-  padding-bottom: 88px;
+  background: rgba(201, 201, 201, 0.15); /* Semi-transparent background */
+  backdrop-filter: blur(8px); /* Blur effect */
+  border: 3px solid rgba(255, 255, 255, 0.2); /* Border */
+  border-right-color: rgba(255, 255, 255, 0.1); /* Right border color */
+  border-bottom-color: rgba(255, 255, 255, 0.1); /* Bottom border color */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1); /* Box shadow */
+  padding-bottom: 88px; /* Bottom padding */
   animation: drop 2s ease-in-out;
 }
 
+/* Intro text styling */
 .intro-text {
   text-align: center;
   max-width: 600px;
@@ -28,6 +31,7 @@
   animation: drop 2s ease-in-out;
 }
 
+/* Styling for the intro text h1 */
 .intro-text h1 {
   font-size: 54px;
   font-weight: 500;
@@ -36,17 +40,20 @@
   -webkit-text-fill-color: transparent;
 }
 
+/* Styling for the intro text paragraph */
 .intro-text p {
   margin-top: 5px;
   font-size: 20px;
   color: #2c2772;
 }
 
+/* Call to action (CTA) styling */
 .cta {
   padding: 50px 0px 0px 0px;
   animation: drop 2s ease-in-out;
 }
 
+/* Styling for the product CTA button */
 .cta-product {
   border: 2px solid rgb(152, 47, 134);
   background-color: rgba(233, 203, 246, 0.58);
@@ -57,6 +64,7 @@
   font-size: 15px;
 }
 
+/* Styling for the login CTA button */
 .cta-login {
   background: #c36cbb;
   width: 150px;
@@ -68,6 +76,7 @@
   margin: 30px 0px 0px 30px;
 }
 
+/* Background image styling */
 .home-background {
   position: absolute;
   flex: 1;
@@ -76,6 +85,7 @@
   z-index: -1;
 }
 
+/* Styling for the background image */
 .home-background img {
   margin-top: 30px;
   height: 70vh;
@@ -84,18 +94,14 @@
   animation: drop 2s ease-in-out;
 }
 
-
-//Drop in animation when the pages is loaded//
+/* Drop-in animation when the page is loaded */
 @keyframes drop {
   0% {
-    opacity: 0;
-    transform: translateY(-40px);
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(-40px); /* Move up */
   }
-
   100% {
-    opacity: 1;
-    transform: translateX(0px);
+    opacity: 1; /* End with opacity 1 */
+    transform: translateX(0px); /* No horizontal translation */
   }
 }
-
-
