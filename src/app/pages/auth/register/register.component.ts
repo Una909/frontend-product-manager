@@ -1,16 +1,19 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
-import {MatInputModule} from "@angular/material/input";
 import {Router, RouterLink} from "@angular/router";
 import {UserControllerService} from "../../../openapi-client";
 
 @Component({
     selector: 'pm-register',
     standalone: true,
-    imports: [CommonModule, FormsModule, MatInputModule, RouterLink, ReactiveFormsModule],
-    templateUrl: './register.component.html',
-    styleUrl: './register.component.scss'
+    // Importing necessary modules
+    imports: [CommonModule,
+      FormsModule,
+      RouterLink,
+      ReactiveFormsModule],
+    templateUrl: './register.component.html', // Template file
+    styleUrl: './register.component.scss' // Style file
 })
 
 export class RegisterComponent {
@@ -22,9 +25,10 @@ export class RegisterComponent {
   }
 
     // Creating a FormGroup for the registration form
-    // Each form has its Validators
     registrationForm = new FormGroup({
-        firstName: new FormControl<string>('', [
+
+      // Defining form controls with Validators
+      firstName: new FormControl<string>('', [
             Validators.required,
             Validators.minLength(2),
             Validators.maxLength(255)
@@ -75,7 +79,7 @@ export class RegisterComponent {
     });
     // Method to handle the submit button
     submit() {
-        // Getting the values of the form from above and turns it into a variable
+        // Extracting form values
         let firstName: string = this.registrationForm.value.firstName!;
         let lastName: string = this.registrationForm.value.lastName!;
         let street: string = this.registrationForm.value.street!;
@@ -87,7 +91,7 @@ export class RegisterComponent {
         let email: string = this.registrationForm.value.email!;
         let password: string = this.registrationForm.value.password!;
 
-        // Calling the userService to match the variables
+        // Calling userService to register the user
         this.userService.register({
             firstName: firstName,
             lastName: lastName,

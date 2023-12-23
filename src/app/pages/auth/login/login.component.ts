@@ -5,6 +5,7 @@ import { Router } from "@angular/router";
 @Component({
   selector: 'pm-login',
   standalone: true,
+  // Importing necessary modules
   imports: [
     FormsModule,
     ReactiveFormsModule
@@ -29,7 +30,7 @@ export class LoginComponent {
       password: ['', [
         Validators.required,
         Validators.minLength(8),
-        Validators.maxLength(2147483647) // Are you sure about this maximum length?
+        Validators.maxLength(2147483647)
       ]]
     });
   }

@@ -7,9 +7,13 @@ import {FooterComponent} from "./footer/footer.component";
 @Component({
   selector: 'pm-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  // Importing necessary modules
+  imports: [CommonModule,
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent],
+  templateUrl: './app.component.html', // Template file
+  styleUrl: './app.component.scss' // Style file
 })
 export class AppComponent {
   title = 'frontend-product-manager';

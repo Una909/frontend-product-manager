@@ -1,47 +1,69 @@
 <div class="registerForm">
 <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+
+  <!-- Input field for First Name -->
   <div>
     <label for="firstName">First Name *</label>
     <input type="text" formControlName="firstName" id="firstName">
   </div>
+
+  <!-- Input field for Last Name -->
   <div>
     <label for="lastName">Last Name *</label>
     <input type="text" formControlName="lastName" id="lastName">
   </div>
+
+  <!-- Input field for Street -->
   <div>
     <label for="street">Street *</label>
     <input type="text" formControlName="street" id="street">
   </div>
+
+  <!-- Input field for Zip -->
   <div>
     <label for="zip">Zip *</label>
     <input type="text" formControlName="zip" id="zip">
   </div>
+
+  <!-- Input field for City -->
   <div>
     <label for="city">City *</label>
     <input type="text" formControlName="city" id="city">
   </div>
+
+  <!-- Input field for Country -->
   <div>
     <label for="country">Country *</label>
     <input type="text" formControlName="country" id="country">
   </div>
+
+  <!-- Input field for Phone -->
   <div>
     <label for="phone">Phone *</label>
     <input type="text" formControlName="phone" id="phone">
   </div>
+
+  <!-- Input field for MobilePhone -->
   <div>
     <label for="mobilePhone">MobilePhone *</label>
     <input type="text" formControlName="mobilePhone" id="mobilePhone">
   </div>
+
+  <!-- Input field for Email -->
   <div>
     <label for="email">Email *</label>
     <input type="text" formControlName="email" id="email">
   </div>
+
+  <!-- Input field for Password -->
   <div>
     <label for="password">Password *</label>
     <input type="text" formControlName="password" id="password">
   </div>
+
+  <!-- Submit button -->
   <div>
-    <button type="submit">Register</button>
+    <button class="cta-register" type="submit">Register</button>
   </div>
 </form>
 </div>

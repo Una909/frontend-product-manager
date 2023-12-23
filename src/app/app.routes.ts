@@ -3,24 +3,28 @@ import {isadminGuard} from "./authguards/isadmin.guard";
 
 // Routes for the URLs
 export const routes: Routes = [
+
   // Homepage/Default route
   {
     path: '',
     loadComponent: () =>
       import('./pages/homepage/home/home.component').then(val => val.HomeComponent),
   },
+
   // Login route
   {
     path: 'auth/login',
     loadComponent: () =>
       import('./pages/auth/login/login.component').then(val => val.LoginComponent),
   },
+
   // Register route
   {
     path: 'auth/register',
     loadComponent: () =>
       import('./pages/auth/register/register.component').then(val => val.RegisterComponent)
   },
+
   // Product route for create, list, edit and detail
   {
     path: 'product/create',
@@ -44,6 +48,7 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/product/product-detail/product-detail.component').then(val => val.ProductDetailComponent)
   },
+
   // Category routes for create, list and edit
   {
     path: 'category/create',
@@ -62,6 +67,7 @@ export const routes: Routes = [
       import('./pages/category/category-edit/category-edit.component').then(val => val.CategoryEditComponent),
       canActivate: [isadminGuard] // Can only be accessed by admins
   },
+
   // User route
   {
     path: 'user/list',
