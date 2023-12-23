@@ -14,6 +14,13 @@ import {UserControllerService} from "../../../openapi-client";
 })
 
 export class RegisterComponent {
+
+  constructor(
+    private readonly router: Router,
+    private readonly userService: UserControllerService
+  ) {
+  }
+
     // Creating a FormGroup for the registration form
     // Each form has its Validators
     registrationForm = new FormGroup({
@@ -96,11 +103,5 @@ export class RegisterComponent {
             // Navigating to the login page after successful registration
             this.router.navigateByUrl('auth/login')
         });
-    }
-
-    constructor(
-        private readonly router: Router,
-        private readonly userService: UserControllerService
-    ) {
     }
 }
