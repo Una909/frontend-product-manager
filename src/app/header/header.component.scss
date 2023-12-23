@@ -37,8 +37,20 @@
   background: none;
   border: none;
   text-decoration: none;
-  color: aqua;
+  color: #7cfaff;
   font-family: CornDemo, serif;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  text-decoration: none;
+  color: #7cfaff;
+  font-family: CornDemo, serif;
+  font-weight: bold;
   font-size: inherit;
   cursor: pointer;
   padding: 0;
@@ -58,7 +70,7 @@
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 0.25rem);
-  background-color: white;
+  background-color: rgba(128, 111, 155, 0.65);
   padding: 0.75rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
@@ -69,7 +81,7 @@
 }
 
 /* Dropdown menu display when active */
-.dropdown.active > .link + .dropdown-menu {
+.dropdown.active > .nav-link + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -80,4 +92,5 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  font-weight: normal;
 }
