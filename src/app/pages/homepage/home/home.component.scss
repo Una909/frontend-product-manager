@@ -1,0 +1,101 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.glassBox {
+  position: absolute;
+  margin-top: 100px;
+  width: 550px;
+  border-radius: 15px;
+  background: rgba(201, 201, 201, 0.15);
+  backdrop-filter: blur(8px);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-right-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  padding-bottom: 88px;
+  animation: drop 2s ease-in-out;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 600px;
+  margin-top: 150px;
+  animation: drop 2s ease-in-out;
+}
+
+.intro-text h1 {
+  font-size: 54px;
+  font-weight: 500;
+  background: linear-gradient(to right, #2b2d77, #553a75);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #2c2772;
+}
+
+.cta {
+  padding: 50px 0px 0px 0px;
+  animation: drop 2s ease-in-out;
+}
+
+.cta-product {
+  border: 2px solid rgb(152, 47, 134);
+  background-color: rgba(233, 203, 246, 0.58);
+  color: #421b4b;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.cta-login {
+  background: #c36cbb;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  color: white;
+  margin: 30px 0px 0px 30px;
+}
+
+.home-background {
+  position: absolute;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+}
+
+.home-background img {
+  margin-top: 30px;
+  height: 70vh;
+  width: 100%;
+  filter: drop-shadow(25px 10px 7px rgb(241, 163, 176));
+  animation: drop 2s ease-in-out;
+}
+
+
+//Drop in animation when the pages is loaded//
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
